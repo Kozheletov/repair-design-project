@@ -51,6 +51,13 @@ button {
   background: #E3B873;
   border-radius: 2px;
   cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+button:hover,
+button:focus {
+  color: #131313;
 }
 
 img {
@@ -118,6 +125,12 @@ img {
   font-size: 14px;
   line-height: 16px;
   color: #fff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.nav__link:hover, .nav__link:focus {
+  color: #E3B873;
 }
 
 .nav__link_current {
@@ -141,6 +154,9 @@ img {
 }
 
 @media (max-width: 1200px) {
+  .header .container {
+    margin-left: 0;
+  }
   .navigation {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -156,9 +172,6 @@ img {
 }
 
 @media (max-width: 990px) {
-  .header .container {
-    margin-left: 0;
-  }
   .nav__list {
     margin-left: 15px;
   }
@@ -185,6 +198,7 @@ img {
     font-size: 12px;
     line-height: 14px;
     color: #fff;
+    text-decoration: none;
   }
   .navigation__name {
     font-size: 12px;
@@ -194,6 +208,200 @@ img {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    min-height: 57px;
+  }
+}
+
+.hero {
+  position: relative;
+  min-height: 707px;
+  background-color: #131313;
+}
+
+.hero .container {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero__left-line {
+  width: 82px;
+}
+
+.hero__link {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #E3B873;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-top: 260px;
+  margin-left: 5px;
+}
+
+.hero__link::after {
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: #E3B873;
+  position: absolute;
+  top: -18px;
+  left: 112px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.hero__wrapper {
+  width: 100%;
+  min-height: 707px;
+  background-image: url("./assets/images/hero-bg.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.hero__main {
+  max-width: 515px;
+  margin-top: 185px;
+  margin-left: 60px;
+}
+
+.hero__header {
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.hero__span {
+  color: #E3B873;
+}
+
+.hero__text {
+  margin-bottom: 40px;
+  font-family: "FuturaBookC";
+  font-size: 22px;
+  line-height: 30px;
+  color: #fff;
+}
+
+.hero__button {
+  font-family: "FuturaDemiC";
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  border: 0;
+  width: 207px;
+  height: 51px;
+  display: inline-block;
+}
+
+.hero__button ~ .hero__button {
+  margin-left: 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: -50px;
+  width: 250px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #131313;
+}
+
+.button-scroll {
+  position: relative;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  border: 0;
+  background-color: transparent;
+}
+
+.button-scroll:hover,
+.button-scroll:hover {
+  color: #E3B873;
+}
+
+.button-scroll::before {
+  content: "";
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: 1.5px solid #E3B873;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.button-scroll::after {
+  content: "";
+  width: 10px;
+  height: 7px;
+  background-image: url("./assets/images/down-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+}
+
+@media (max-width: 1200px) {
+  .hero__left-line {
+    display: none;
+  }
+  .scroll-down {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .hero__main {
+    margin: 150px auto 0;
+  }
+  .scroll-down {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__main {
+    margin-top: 100px;
+    max-width: 480px;
+  }
+  .hero__header {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .hero {
+    height: auto;
+  }
+  .hero__wrapper {
+    height: auto;
+    background-size: cover;
   }
 }
 /*# sourceMappingURL=styles.css.map */
