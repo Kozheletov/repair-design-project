@@ -137,14 +137,20 @@
 						<div class="gallery__photos">
 							<ul class="gallery__photos-list">
 								<li class="gallery__photos-item">
-									<img src="" alt="">
+									<picture>
+										<source srcset="./assets/images/galery-photo-mobile.png" media="(max-width: 375px)">
+										<source srcset="./assets/images/gallery-photo-1.jpg">
+										<img class="gallery-first-photo" src="./assets/images/gallery-photo-1.jpg" alt="photo" width="679"
+											height="482">
+									</picture>
 								</li>
 								<li class="gallery__photos-item">
-									<img src="" alt="">
+									<img class="gallery__second-photo" src="./assets/images/gallery-photo-1.jpg" alt="photo" width="679"
+										height="482">
 								</li>
 							</ul>
-							<button class="gallery__button"></button>
-							<button class="gallery__button"></button>
+							<button class="gallery__button gallery__button-left"></button>
+							<button class="gallery__button gallery__button-right"></button>
 						</div>
 					</div>
 

@@ -20,10 +20,13 @@
   src: url("./assets/fonts/YesevaOne.ttf") format("truetype");
 }
 
+// color
 $main-color: #E3B873;
 $dark-bg: #131313;
 $white: #fff;
 
+
+// media
 $extra-large: 1200px;
 $large: 990px;
 $medium: 768px;
@@ -65,11 +68,6 @@ button {
 button:hover,
 button:focus {
 	color: $dark-bg;
-}
-
-img {
-	width: 100%;
-	height: auto;
 }
 
 .wrapper {
@@ -455,7 +453,7 @@ img {
 // Projects start
 
 .projects {
-	padding-top: 165px;
+	padding-top: 100px;
 	padding-bottom: 90px;
 	background-color: $dark-bg;
 	.container {
@@ -464,11 +462,14 @@ img {
 		margin-right: 0;
 		padding-right: 0;
 		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
 	}
 
 	&__wrapper {
 		width: 35%;
 		margin-right: 50px;
+		padding-top: 65px;
 	}
 
 	&__header {
@@ -586,8 +587,10 @@ img {
 
 .gallery {
 	flex-grow: 1;
+	width: calc(65% - 50px);
 	&__nav {
 		margin: 0;
+		margin-bottom: 42px;
 		padding: 0;
 		list-style: none;
 		display: flex;
@@ -622,5 +625,255 @@ img {
 	&__link_current {
 		color: $main-color;
 		box-shadow: 0 6px $dark-bg,0 7px $main-color;
+	}
+
+	&__photos {
+		position: relative;
+	}
+
+	&__photos picture {
+		width: 679px;
+		height: 482px;
+	}
+
+	&__photos-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+	}
+
+	&__photos-list li + li {
+		margin-left: 20px;
+	}
+
+	&__button-left {
+		display: none;
+	}
+
+	&__button-right {
+		width: 55px;
+		height: 55px;
+		border: 0;
+		padding: 0;
+		border-radius: 50%;
+		position: absolute;
+		background-image: url("./assets/images/gallery-photo-arrow-rigth-desk.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		top: 50%;
+    left: 735px;
+    transform: translateY(-50%);
+	}
+}
+
+@media (max-width: 1405px) {
+	.gallery__button-right {
+		left: 337px;
+	}
+}
+
+@media (max-width: 1250px) {
+	.projects .container {
+		padding-right: 15px;
+	}
+
+	.gallery__second-photo {
+		display: none;
+	}
+
+	.gallery-first-photo {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.gallery__photos-list li + li {
+    margin-left: 0;
+}
+
+	.gallery__button-right {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.projects__wrapper {
+		padding-top: 0;
+	}
+
+	.projects__header {
+		margin-top: 0;
+	}
+}
+
+@media (max-width: $extra-large) {
+	.projects__table {
+		width: 400px;
+	}
+
+	.projects__table th {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: $large) {
+	.projects .container {
+		margin-left: 50px;
+	}
+
+	.projects__text {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 20px;
+	}
+
+	.projects__nav {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 885px) {
+	.projects {
+		padding-bottom: 30px;
+		.container {
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+		}
+	
+		&__wrapper {
+			width: 80%;
+			margin-right: 0;
+		}
+
+		&__header {
+			text-align: center;
+		}
+
+		&__header::after {
+			display: none;
+		}
+
+		&__nav {
+			position: absolute;
+			bottom: 1%;
+			left: 37%;
+			z-index: 100;
+		}
+
+		&__table {
+			margin-bottom: 20px;
+		}
+	}
+
+	.gallery {
+		width: 90%;
+		padding-bottom: 45px;
+	}
+
+	.gallery__nav {
+		display: none;
+	}
+}
+
+@media (max-width: $medium) {
+	.projects {
+		.container {
+			margin-left: 0;
+		}
+
+		&__nav {
+			display: none;
+		}
+	}
+
+	.gallery {
+		padding-bottom: 0;
+	}
+}
+
+@media (max-width: $extra-small) {
+	.projects {
+		padding-top: 35px;
+
+		.container {
+			padding-left: 17.5px;
+			padding-right: 17.5px;
+			margin-left: 0;
+		}
+
+		&__wrapper {
+			width: 100%;
+			margin-right: 0;
+		}
+
+		&__header {
+			font-size: 22px;
+			line-height: 138.6%;
+			text-align: center;
+			letter-spacing: -0.07em;
+		}
+
+		&__header::after {
+			display: none;
+		}
+
+		&__text {
+			font-size: 14px;
+			line-height: 158.48%;
+			text-align: center;
+			margin-bottom: 300px;
+		}
+
+		&__table {
+			width: 100%;
+		}
+
+		&__table th,
+		&__table tr {
+			font-size: 14px;
+			line-height: 135.84%;
+		}
+	}
+
+	.gallery {
+		width: 100%;
+    position: absolute;
+    left: 17px;
+    top: 180px;
+
+		&__button-right {
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			left: 81%;
+			background-image: url("./assets/images/gallery-arrow-next-mob.svg");
+		}
+
+		&__button-left {
+			width: 36px;
+			height: 36px;
+			border: 0;
+			border-radius: 50%;
+			position: absolute;
+			left: 5%;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url("./assets/images/gallery-arrow-prev.svg");
+			background-repeat: no-repeat;
+			background-position: 12px center;
+			display: block;
+		}
+	}
+
+	.gallery-first-photo {
+		display: block;
+		width: 100%;
+	}
+
+	.gallery__photos-list li + li {
+		margin-left: 0;
 	}
 }
