@@ -1006,7 +1006,7 @@ button:focus {
 
 .communication__label {
   display: block;
-  font-family: FuturaBookC;
+  font-family: "FuturaBookC";
   font-size: 15px;
   line-height: 20px;
   color: rgba(54, 54, 54, 0.5);
@@ -1087,6 +1087,7 @@ button:focus {
   }
   .communication__block input {
     background-color: #131313;
+    border-bottom: 1px solid #fff;
   }
   .communication__block + .communication__block {
     margin-top: 50px;
@@ -1127,5 +1128,139 @@ button:focus {
             order: 1;
     margin-bottom: -17px;
   }
+}
+
+.header-section {
+  margin-bottom: 8px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #181818;
+}
+
+.repair__camera-icon {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.repair__lines {
+  display: inline-block;
+  position: relative;
+}
+
+.repair__lines::before {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background-color: #E3B873;
+  position: absolute;
+  top: 14px;
+  left: -43px;
+}
+
+.repair__lines::after {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background-color: #E3B873;
+  position: absolute;
+  top: 14px;
+  right: -42px;
+}
+
+.repair__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.repair__item {
+  width: 31.3%;
+}
+
+.repair__item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.repair__item + .repair__item {
+  margin-left: 30px;
+}
+
+.repair__list-wrapper {
+  padding-top: 20px;
+  padding-left: 35px;
+  padding-bottom: 55px;
+  width: 330px;
+  margin: 0 auto;
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+  background-color: #fff;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+
+.repair__list-header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #363636;
+}
+
+.repair__sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.repair__sublist li {
+  position: relative;
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 25px;
+  color: #959595;
+}
+
+.repair__sublist li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  top: 10px;
+  left: -11px;
+  border-radius: 50%;
+  background-color: #959595;
+}
+
+.repair__button {
+  width: 228px;
+  height: 54px;
+  margin-left: 26px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #fff;
+  border: 0;
+  -webkit-transform: translateY(-145px);
+          transform: translateY(-145px);
+  -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+          box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
 }
 /*# sourceMappingURL=styles.css.map */

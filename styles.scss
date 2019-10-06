@@ -878,6 +878,9 @@ button:focus {
 	}
 }
 
+//Projects end
+//Control start
+
 .control {
 	position: relative;
 	padding-bottom: 140px;
@@ -998,7 +1001,7 @@ button:focus {
 
 	&__label {
 		display: block;
-		font-family: FuturaBookC;
+		font-family: "FuturaBookC";
 		font-size: 15px;
 		line-height: 20px;
 		color: rgba(54, 54, 54, 0.5);
@@ -1094,6 +1097,7 @@ button:focus {
 	
 		&__block input {
 			background-color: $dark-bg;
+			border-bottom: 1px solid $white;
 		}
 
 		&__block + &__block {
@@ -1121,4 +1125,140 @@ button:focus {
 			margin-bottom: -17px;
 		}
 	}
+}
+
+//Control end
+//Communication start
+
+.header-section {
+	margin-bottom: 8px;
+	font-family: "YesevaOne";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #181818;
+}
+
+.repair {
+	&__camera-icon {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__lines {
+		display: inline-block;
+		position: relative;
+	}
+
+	&__lines::before {
+		content: "";
+		width: 32px;
+		height: 1.5px;
+		background-color: $main-color;
+		position: absolute;
+		top: 14px;
+    left: -43px;
+	}
+
+	&__lines::after {
+		content: "";
+		width: 32px;
+		height: 1.5px;
+		background-color: $main-color;
+		position: absolute;
+		top: 14px;
+    right: -42px;
+	}
+
+	&__list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	&__item {
+		width: 31.3%;
+	}
+
+	&__item img {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+
+	&__item + &__item {
+		margin-left: 30px;
+	}
+
+	&__list-wrapper {
+		padding-top: 20px;
+		padding-left: 35px;
+		padding-bottom: 55px;
+		width: 330px;
+		margin: 0 auto;
+		transform: translateY(-120px);
+		background-color: $white;
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+	}
+
+	&__list-header {
+		margin: 0;
+		margin-bottom: 10px;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 25px;
+		color: #363636;
+	}
+
+	&__sublist {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__sublist li {
+		position: relative;
+		font-family: "FuturaBookC";
+		font-size: 15px;
+		line-height: 25px;
+		color: #959595;
+	}
+
+	&__sublist li::before {
+		content: "";
+		width: 4px;
+		height: 4px;
+		position: absolute;
+		top: 10px;
+    left: -11px;
+		border-radius: 50%;
+		background-color: #959595;
+	}
+
+	&__button {
+		width: 228px;
+		height: 54px;
+		margin-left: 26px;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 25px;
+		text-transform: uppercase;
+		color: $white;
+		border: 0;
+		transform: translateY(-145px);
+		box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+	}
+}
+
+@media (max-width: 1020px) {
+
 }
