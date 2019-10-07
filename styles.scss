@@ -20,6 +20,11 @@
   src: url("./assets/fonts/YesevaOne.ttf") format("truetype");
 }
 
+@font-face {
+	font-family: "Proximanova";
+	src: url("./assets/fonts/Proximanova.woff2") format("woff2");
+ }
+
 // color
 $main-color: #E3B873;
 $dark-bg: #131313;
@@ -1457,5 +1462,239 @@ button:focus {
 @media (max-width: $extra-small) {
 	.measurement {
 		display: none;
+	}
+}
+
+//end Measurement
+//start Collection
+
+.collection {
+	position: relative;
+	min-height: 864px;
+	margin-top: 240px;
+	margin-bottom: 100px;
+	background-color: $dark-bg;
+	background-image: url("./assets/images/collection-bg.png");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+
+	&__wrapper-header {
+		width: 35%;
+		padding-top: 130px;
+	}
+
+	&__header {
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 27px;
+		line-height: 37px;
+		text-transform: uppercase;
+		color: $main-color;
+	}
+
+	&__list {
+		font-family: "Proximanova";
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__list li + li {
+		margin-top: 14px;
+	}
+
+	&__link {
+		font-size: 20px;
+		line-height: 34px;
+		color: $white;
+		border-bottom: 1px solid transparent;
+	}
+
+	&__link_is-active {
+		color: $main-color;
+		border-bottom: 1px solid $main-color;
+	}
+
+	&__link:hover,
+	&__link:focus {
+		color: $main-color;
+		border-bottom: 1px solid $main-color;
+	}
+
+	&__wrapper-gallery {
+		position: absolute;
+		top: -112px;
+		right: 100px;
+		display: flex;
+	}
+
+	&__first-list,
+	&__second-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__second-list {
+		margin-left: 40px;
+	}
+
+	&__first-list__item:first-child {
+		padding-top: 70px;
+    margin-bottom: 40px;
+	}
+
+	&__second-list__item:first-child {
+    margin-bottom: 36px;
+	}
+
+	&__button-left,
+	&__button-right {
+		display: none;
+	}
+}
+
+.current-slider {
+	display: none;
+}
+
+@media (max-width: 1270px) {
+	.collection {
+		&__wrapper-gallery {
+			right: 15px;
+		}
+	}
+}
+
+@media (max-width: 1070px) {
+	.collection {
+		min-height: auto;
+		margin-top: 40px;
+		margin-bottom: 0;
+		padding-bottom: 30px;
+
+		.container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__header {
+			font-size: 24px;
+		}
+
+		&__first-list__item,
+		&__second-list {
+			display: none;
+		}
+
+		&__wrapper-gallery {
+			position: relative;
+			margin-top: 330px;
+		}
+
+		&__wrapper-header {
+			padding-top: 0;
+		}
+
+		&__button-left,
+		&__button-right {
+			display: block;
+			position: absolute;
+			width: 55px;
+			height: 55px;
+			border: 0;
+			border-radius: 50%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&__button-right {
+			background-image: url("./assets/images/gallery-photo-arrow-rigth-desk.svg");
+			background-repeat: no-repeat;
+			background-position: center center;
+			right: 5%;
+		}
+
+		&__button-left {
+			background-image: url("./assets/images/arrow-slider-left-desk.svg");
+			background-repeat: no-repeat;
+			background-position: center center;
+			left: 5%;
+		}
+	}
+	.current-slider {
+		display: block;
+	}
+
+	.current-slider img {
+		max-width: 600px;
+		height: auto;
+	}
+}
+
+@media (max-width: 880px) {
+	.collection {
+
+		.container {
+			flex-direction: column;
+		}
+
+		&__wrapper-header {
+			width: 100%;
+			text-align: center;
+		}
+
+		&__list {
+			display: none;
+		}
+
+		&__wrapper-gallery {
+			width: 90%;
+			margin-top: 0;
+			top: 0;
+			right: 0;
+		}
+
+		&__first-list img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+@media (max-width: $small) {
+	.collection {
+		background-image: none;
+	}
+}
+
+@media (max-width: $extra-small) {
+	.collection {
+		background-color: transparent;
+		margin-top: 0;
+		&__wrapper-gallery {
+			width: 100%;
+		}
+
+		&__header {
+			margin-top: 0;
+		}
+
+		&__button-left {
+			width: 36px;
+			height: 36px;
+			background-image: url("./assets/images/gallery-arrow-prev.svg");
+			background-repeat: no-repeat;
+			background-position: 12px center;
+		}
+
+		&__button-right {
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			background-image: url("./assets/images/gallery-arrow-next-mob.svg");
+		}
 	}
 }
