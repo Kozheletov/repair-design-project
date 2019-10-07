@@ -1315,4 +1315,162 @@ button:focus {
             transform: translateY(-162px);
   }
 }
+
+.measurement .container {
+  max-width: 100%;
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.measurement__image img {
+  display: block;
+  width: 100%;
+}
+
+.measurement__wrapper {
+  width: 37%;
+  margin-left: auto;
+  margin-top: 110px;
+}
+
+.measurement__form {
+  position: relative;
+  padding-bottom: 25px;
+  background-color: #131313;
+}
+
+.measurement__block {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.measurement__legend {
+  display: block;
+  padding-top: 20px;
+  font-family: "FuturaDemiC";
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+}
+
+.measurement__label {
+  display: block;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.measurement__input {
+  width: 100%;
+  padding: 7px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: #131313;
+}
+
+.measurement__input::-webkit-input-placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.measurement__input:-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.measurement__input::-ms-input-placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.measurement__input::placeholder {
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.measurement__checkbox {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+
+.measurement__button {
+  width: 213px;
+  height: 51px;
+  display: block;
+  margin-left: auto;
+  margin-right: 10%;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0;
+  padding: 0;
+}
+
+.measurement__text {
+  position: relative;
+  margin-top: 40px;
+  padding-left: 125px;
+  font-family: "FuturaDemiC";
+  font-size: 20px;
+  line-height: 25px;
+  color: #E3B873;
+}
+
+.measurement__text::before {
+  content: "";
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  background-image: url("/assets/images/measurement-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center -10px;
+}
+
+@media (max-width: 1364px) {
+  .measurement .container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .measurement__wrapper {
+    width: 60%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .measurement__wrapper {
+    width: 90%;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .measurement {
+    display: none;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
