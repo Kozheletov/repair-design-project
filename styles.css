@@ -1024,6 +1024,9 @@ button:focus {
 }
 
 @media (max-width: 880px) {
+  .control {
+    padding-bottom: 30px;
+  }
   .control__video-wrapper {
     left: calc(50%);
     -webkit-transform: translateX(-50%);
@@ -1201,7 +1204,7 @@ button:focus {
   padding-top: 20px;
   padding-left: 35px;
   padding-bottom: 55px;
-  width: 330px;
+  width: 85%;
   margin: 0 auto;
   -webkit-transform: translateY(-120px);
           transform: translateY(-120px);
@@ -1262,5 +1265,54 @@ button:focus {
           transform: translateY(-145px);
   -webkit-box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
           box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+}
+
+@media (max-width: 1020px) {
+  .repair__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .repair__item {
+    width: 60%;
+  }
+  .repair__item + .repair__item {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 870px) {
+  .repair__item {
+    width: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .repair__item {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .repair__item {
+    width: 100%;
+    height: 550px;
+  }
+  .repair__list-wrapper {
+    margin-left: 0;
+    padding-bottom: 22px;
+    -webkit-transform: translateY(-143px);
+            transform: translateY(-143px);
+  }
+  .repair__sublist li {
+    font-size: 13px;
+  }
+  .repair__button {
+    width: 190px;
+    height: 40px;
+    font-size: 15px;
+    -webkit-transform: translateY(-162px);
+            transform: translateY(-162px);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
