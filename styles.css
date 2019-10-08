@@ -76,6 +76,35 @@ button:focus {
   padding: 0 15px;
 }
 
+.header-icon {
+  text-align: center;
+}
+
+.header__lines {
+  display: inline-block;
+  position: relative;
+}
+
+.header__lines::before {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background-color: #E3B873;
+  position: absolute;
+  top: 14px;
+  left: -43px;
+}
+
+.header__lines::after {
+  content: "";
+  width: 32px;
+  height: 1.5px;
+  background-color: #E3B873;
+  position: absolute;
+  top: 14px;
+  right: -42px;
+}
+
 .header {
   background-color: #131313;
 }
@@ -1694,5 +1723,29 @@ button:focus {
     position: absolute;
     background-image: url("./assets/images/gallery-arrow-next-mob.svg");
   }
+}
+
+.design .header-icon {
+  margin-bottom: 8px;
+}
+
+.design__text {
+  width: 60%;
+  margin: 0 auto;
+  font-family: "FuturaBookC";
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #363636;
+}
+
+.design__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
 }
 /*# sourceMappingURL=styles.css.map */
