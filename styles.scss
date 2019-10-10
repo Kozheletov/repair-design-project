@@ -28,7 +28,7 @@
 // color
 $main-color: #E3B873;
 $dark-bg: #131313;
-$white: #fff;
+$text-color: #fff;
 
 
 // media
@@ -63,7 +63,7 @@ button {
 	line-height: 15px;
 	text-align: center;
 	text-transform: uppercase;
-	color: $white;
+	color: $text-color;
 	background: $main-color;
 	border-radius: 2px;
 	cursor: pointer;
@@ -159,7 +159,7 @@ button:focus {
 		text-transform: uppercase;
 		font-size: 14px;
 		line-height: 16px;
-		color: $white;
+		color: $text-color;
 		transition: color 0.3s;
 	}
 
@@ -236,7 +236,7 @@ button:focus {
 		margin-right: 0;
 		font-size: 12px;
 		line-height: 14px;
-		color: $white;
+		color: $text-color;
 		text-decoration: none;
 	}
 
@@ -313,7 +313,7 @@ button:focus {
 	font-size: 40px;
 	line-height: 53px;
 	text-transform: uppercase;
-	color: $white;
+	color: $text-color;
 }
 
 .hero__span {
@@ -325,7 +325,7 @@ button:focus {
 	font-family: "FuturaBookC";
 	font-size: 22px;
 	line-height: 30px;
-	color: $white;
+	color: $text-color;
 }
 
 .hero__button {
@@ -341,7 +341,7 @@ button:focus {
 
 .hero__button ~ .hero__button {
 	margin-left: 20px;
-	border: 1px solid $white;
+	border: 1px solid $text-color;
 	background-color: transparent;
 }
 
@@ -533,7 +533,7 @@ button:focus {
 		font-family: "FuturaBookC";
 		font-size: 18px;
 		line-height: 29px;
-		color: $white;
+		color: $text-color;
 	}
 
 	&__table {
@@ -555,7 +555,7 @@ button:focus {
 	&__table tr {
 		font-size: 15px;
 		line-height: 20px;
-		color: $white;
+		color: $text-color;
 		vertical-align: top;
 	}
 
@@ -615,7 +615,7 @@ button:focus {
 	}
 
 	&__button_current {
-		background-color: $white;
+		background-color: $text-color;
 	}
 }
 
@@ -935,7 +935,7 @@ button:focus {
 		line-height: 28px;
 		text-align: center;
 		text-transform: uppercase;
-		color: $white;
+		color: $text-color;
 	}
 
 	&__camera-icon {
@@ -1119,7 +1119,7 @@ button:focus {
 			margin-bottom: 50px;
 			font-size: 14px;
 			line-height: 169.8%;
-			color: $white;
+			color: $text-color;
 		}
 	}
 
@@ -1133,7 +1133,7 @@ button:focus {
 	
 		&__block input {
 			background-color: $dark-bg;
-			border-bottom: 1px solid $white;
+			border-bottom: 1px solid $text-color;
 		}
 
 		&__block + &__block {
@@ -1144,11 +1144,11 @@ button:focus {
 		&__block input::placeholder {
 			font-size: 18px;
 			line-height: 138.72%;
-			color: $white;
+			color: $text-color;
 		}
 
 		&__checkbox {
-			color: $white;
+			color: $text-color;
 			margin: 0;
 			margin-bottom: 55px;
 			width: 100%;
@@ -1238,7 +1238,7 @@ button:focus {
 		width: 85%;
 		margin: 0 auto;
 		transform: translateY(-120px);
-		background-color: $white;
+		background-color: $text-color;
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
 	}
 
@@ -1288,7 +1288,7 @@ button:focus {
 		font-size: 18px;
 		line-height: 25px;
 		text-transform: uppercase;
-		color: $white;
+		color: $text-color;
 		border: 0;
 		transform: translateY(-145px);
 		box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
@@ -1394,7 +1394,7 @@ button:focus {
 		font-size: 20px;
 		line-height: 25px;
 		text-align: center;
-		color: $white;
+		color: $text-color;
 	}
 
 	&__label {
@@ -1415,7 +1415,7 @@ button:focus {
 	&__input::placeholder {
 		font-size: 18px;
 		line-height: 25px;
-		color: $white;
+		color: $text-color;
 	}
 
 	&__checkbox {
@@ -1425,7 +1425,7 @@ button:focus {
 		margin-bottom: 40px;
 		font-size: 16px;
 		line-height: 22px;
-		color: $white;
+		color: $text-color;
 	}
 
 	&__button {
@@ -1537,7 +1537,7 @@ button:focus {
 	&__link {
 		font-size: 20px;
 		line-height: 34px;
-		color: $white;
+		color: $text-color;
 		border-bottom: 1px solid transparent;
 	}
 
@@ -1743,6 +1743,19 @@ button:focus {
 
 .design {
 	margin-top: 150px;
+	padding-bottom: 307px;
+	position: relative;
+
+	&::after {
+		content: "";
+		width: 100%;
+		height: 456px;
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		background-color: $dark-bg;
+
+	}
 
 	.header-icon {
 		margin-bottom: 8px;
@@ -1780,7 +1793,7 @@ button:focus {
 		position: absolute;
 		top: 295px;
 		left: 35px;
-		background-color: $white;
+		background-color: $text-color;
 		box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.23);
 	}
 
@@ -1831,7 +1844,7 @@ button:focus {
 		line-height: 25px;
 		text-transform: uppercase;
 		text-align: left;
-		color: $white;
+		color: $text-color;
 		border: 0;
 		position: absolute;
 		bottom: -27px;
@@ -1905,7 +1918,7 @@ button:focus {
 		.header-section {
 			font-size: 22px;
 			line-height: 138.6%;
-			color: $white;
+			color: $text-color;
 		}
 
 		.header-icon {
@@ -1916,7 +1929,7 @@ button:focus {
 			width: 100%;
 			font-size: 15px;
 			line-height: 135.84%;
-			color: $white;
+			color: $text-color;
 		}
 
 		&__list-wrapper {
@@ -1944,5 +1957,146 @@ button:focus {
 		.mobile-hidden {
 			display: none;
 		}
+	}
+}
+
+.steps {
+	margin-top: -1px;
+	background-color: $dark-bg;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__wrapper {
+		max-width: 28%;
+	}
+
+	&__slogan {
+		margin: 0;
+		font-family: "FuturaDemiC";
+		font-size: 15px;
+		line-height: 21px;
+		text-transform: uppercase;
+		color: $text-color;
+		transform: translateY(-40px);
+	}
+
+	&__header {
+		margin-top: 0;
+		position: relative;
+    font-family: "YesevaOne";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+		color: #E3B873;
+		transform: translateY(-30px);
+	}
+
+	&__header::after {
+		content: "";
+    width: 92px;
+    height: 1px;
+    background-color: #E3B873;
+    position: absolute;
+    top: 55px;
+    left: 195px;
+	}
+
+	&__number {
+		margin-top: 52px;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 25px;
+		text-transform: uppercase;
+		color: $text-color;
+	}
+
+	&__subheader {
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 23px;
+		text-transform: uppercase;
+		color: $main-color;
+	}
+
+	&__text {
+		font-family: "FuturaBookC";
+		font-size: 15px;
+		line-height: 25px;
+		color: $text-color;
+	}
+
+	&__slider {
+		max-width: 63%;
+	}
+
+	&__list {
+		margin-top: 30px;
+		margin-bottom: 40px;
+		list-style: none;
+		padding-left: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	&__item {
+		width: 140px;
+	}
+
+	&__link {
+		opacity: 0.3;
+		transition: opacity 0.3s;
+	}
+
+	&__link_active {
+		opacity: 1;
+	}
+
+	&__link:focus,
+	&__link:hover {
+		opacity: 1;
+	}
+
+	&__position {
+		position: relative;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 21px;
+		text-transform: uppercase;
+		color: $text-color;
+	}
+
+	&__position::after {
+		content: "";
+		width: 20px;
+		height: 1px;
+		bottom: 0;
+		left: 0;
+		background-color: $main-color;
+		position: absolute;
+	}
+
+	&__name {
+		font-family: "FuturaBookC";
+		font-size: 15px;
+		line-height: 18px;
+		color: $text-color;
+	}
+
+	&__slider-fotos {
+		list-style: none;
+		padding-left: 0;
 	}
 }
