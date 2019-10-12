@@ -2335,7 +2335,7 @@ button:focus {
   background: #E3B873;
   -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
           box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-  background-image: url("../assets/images/team-icon1.svg");
+  background-image: url("./assets/images/team-icon1.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2350,7 +2350,7 @@ button:focus {
   background: #E3B873;
   -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
           box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-  background-image: url("../assets/images/team-icon2.svg");
+  background-image: url("./assets/images/team-icon2.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2365,7 +2365,7 @@ button:focus {
   background: #E3B873;
   -webkit-box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
           box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
-  background-image: url("../assets/images/team-icon3.svg");
+  background-image: url("./assets/images/team-icon3.svg");
   background-repeat: no-repeat;
   background-position: center center;
 }
@@ -2412,7 +2412,7 @@ button:focus {
 
 .team__wrapper {
   position: absolute;
-  width: 80%;
+  width: 85%;
   bottom: -65px;
   left: 20px;
   background-color: #fff;
@@ -2547,6 +2547,126 @@ button:focus {
     margin-bottom: 0;
   }
   .team__text {
+    display: none;
+  }
+}
+
+.clients .header-section {
+  margin-bottom: 13px;
+}
+
+.clients .header-icon {
+  margin-bottom: 10px;
+}
+
+.clients__description {
+  max-width: 350px;
+  margin: 0 auto 40px;
+  font-family: "FuturaBookC";
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #131313;
+}
+
+.clients__list {
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(375px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  grid-column-gap: 4%;
+}
+
+.clients__item {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 20px 30px 85px 20px;
+  -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+}
+
+.clients__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients__name {
+  width: 180px;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #181818;
+}
+
+.clients__image {
+  margin-right: 20px;
+}
+
+.clients__comment {
+  font-family: "FuturaBookC";
+  font-size: 15px;
+  line-height: 27px;
+  color: #959595;
+}
+
+.clients__thing {
+  background-color: #E3B873;
+  font-family: "YesevaOne";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: -27px;
+}
+
+.clients__metres {
+  position: relative;
+  padding: 15px 25px 15px 65px;
+  border-right: 1px solid #fff;
+}
+
+.clients__metres::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 17px;
+  top: 12px;
+  background-image: url("./assets/images/clients-thing-icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.clients__days {
+  position: relative;
+  padding: 15px 25px 15px 65px;
+}
+
+.clients__days::before {
+  content: "";
+  width: 33px;
+  height: 32px;
+  position: absolute;
+  left: 17px;
+  top: 12px;
+  background-image: url("./assets/images/clients-thing-icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+@media (max-width: 375px) {
+  .clients {
     display: none;
   }
 }
