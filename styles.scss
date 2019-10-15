@@ -2566,6 +2566,8 @@ button:focus {
 // start Clients
 
 .clients {
+	padding-bottom: 350px;
+
 	.header-section {
 		margin-bottom: 13px;
 	}
@@ -2674,8 +2676,274 @@ button:focus {
 	}
 }
 
+@media (max-width: 1000px) {
+	.clients {
+		padding-bottom: 0;
+	}
+}
+
 @media (max-width: 375px) {
 	.clients {
+		display: none;
+	}
+}
+
+// end Clients
+// start Contacts
+.wrapper-form {
+	position: absolute;
+	width: 883px;
+	top: -221px;
+  left: 50%;
+  transform: translateX(-50%);
+	margin: 0 auto;
+	background-color: #181818;
+}
+
+.form {
+	max-width: 520px;
+	margin: 0 auto;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	font-family: "FuturaBookC";
+	color: $text-color;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__header {
+		width: 100%;
+		margin: 0 auto 45px;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__label {
+		display: block;
+		font-size: 15px;
+		line-height: 20px;
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	&__input {
+		width: 100%;
+    padding:0 0 7px 0;
+    border: 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+		background-color: #181818;
+		color: $text-color;
+	}
+
+	&__input::placeholder {
+		color: $text-color;
+	}
+
+	&__block-name,
+	&__block-phone {
+		width: 45%;
+	}
+
+	&__block-phone {
+		margin-left: auto;
+	}
+
+	&__block-question {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+
+	&__checkbox {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	&__button {
+		width: 200px;
+		height: 51px;
+		margin: 0 auto;
+		border: 0;
+		font-size: 15px;
+		line-height: 26px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $text-color;
+	}
+}
+
+.contacts {
+	background-color: #1D1D1D;;
+
+	.container {
+		position: relative;
+	}
+
+	&__address {
+		max-width: 590px;
+		margin: 0 auto 20px;
+		padding-top: 270px;
+		font-family: "YesevaOne";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $main-color;
+	}
+
+	&__tel {
+		color: $main-color;
+	}
+
+	&__socials {
+		margin: 0 auto 40px;
+		width: 72px;
+		height: 28px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__socials a {
+		width: 28px;
+		height: 28px;
+		border-radius: 50%;
+		background-color: $main-color;
+	}
+
+	&__socials a:hover {
+		background-color: #EE9C19;
+		transform: scale(1.2);
+	}
+
+	&__email {
+		background-image: url("./assets/images/contacts-email.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&__instagram {
+		background-image: url("./assets/images//contacts-instagram.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&__map {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	&__map img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 1000px) {
+	.wrapper-form {
+		position: static;
+		transform: initial;
+		width: 85%;
+	}
+
+	.form {
+		width: 90%;
+	}
+
+	.contacts {
+		padding-top: 30px;
+
+		&__address {
+			padding-top: 0;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapper-form {
+		width: 100%;
+	}
+
+	.form__block-name,
+	.form__block-phone {
+		width: 100%;
+	}
+
+	.form__button {
+		width: 70%;
+	}
+}
+
+@media (max-width: $extra-small) {
+	.contacts {
+		padding-top: 0;
+		background-color: $dark-bg;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__address {
+			margin-top: 0;
+			font-size: 18px;
+			line-height: 25px;
+		}
+
+		&__address span {
+			display: block;
+		}
+
+		&__map {
+			width: 100%;
+			order: -1;
+		}
+	}
+
+	.wrapper-form {
+		background-color: $dark-bg;
+		order: -2;
+	}
+
+	.form {
+		width: 100%;
+
+		&__block-name {
+			margin-top: 0;
+		}
+
+		&__input {
+			background-color: $dark-bg;
+		}
+
+		&__button {
+			width: 100%;
+			border-radius: 0;
+		}
+
+		&__checkbox {
+			margin-bottom: 60px;
+		}
+	}
+}
+
+.footer {
+	background-color: $dark-bg;
+
+	.navigation {
+		min-height: 130px;
+	}
+}
+
+@media (max-width: $extra-small) {
+	.footer {
 		display: none;
 	}
 }

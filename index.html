@@ -179,15 +179,17 @@
 					<form class="communication">
 						<p class="communication__block">
 							<label class="communication__label" for="name">Name</label>
-							<input class="communication__input" id="name" name="name" type="text" placeholder="What is your name:">
+							<input class="communication__input" id="name" name="name" type="text" placeholder="What is your name:"
+								required>
 						</p>
 						<p class="communication__block">
 							<label class="communication__label" for="phone">Phone</label>
-							<input class="communication__input" id="phone" name="phone" type="tel" placeholder="Your phone number:">
+							<input class="communication__input" id="phone" name="phone" type="tel" placeholder="Your phone number:"
+								required>
 						</p>
-						<button class="communication__button" type="button">submit</button>
+						<button class="communication__button">submit</button>
 						<div class="communication__checkbox">
-							<input type="checkbox" name="confirm-form" id="confirm-form" checked>
+							<input type="checkbox" name="confirm-form" id="confirm-form" checked required>
 							<label for="confirm-form">I agree to the processing of personal data</label>
 						</div>
 					</form>
@@ -290,23 +292,23 @@
 							<p class="measurement__block">
 								<label class="measurement__label" for="measurement__name">Name</label>
 								<input class="measurement__input" id="measurement__name" name="name" type="text"
-									placeholder="What is your name:">
+									placeholder="What is your name:" required>
 							</p>
 							<p class="measurement__block">
 								<label class="measurement__label" for="measurement__phone">Phone</label>
 								<input class="measurement__input" id="measurement__phone" name="phone" type="tel"
-									placeholder="Your phone number:">
+									placeholder="Your phone number:" required>
 							</p>
 							<p class="measurement__block">
 								<label class="measurement__label" for="measurement__email">Phone</label>
 								<input class="measurement__input" id="measurement__email" name="phone" type="tel"
-									placeholder="Your phone number:">
+									placeholder="Your phone number:" required>
 							</p>
 							<p class="measurement__checkbox">
-								<input type="checkbox" name="measurement-form" id="measurement-form" checked>
+								<input type="checkbox" name="measurement-form" id="measurement-form" checked required>
 								<label for="measurement-form">I agree to the processing of personal data</label>
 							</p>
-							<button class="measurement__button" type="button">Call the measurer</button>
+							<button class="measurement__button">Call the measurer</button>
 						</form>
 						<p class="measurement__text">
 							Help save 10 - 20% of the
@@ -732,7 +734,89 @@
 				</div>
 			</section>
 
+			<section class="contacts">
+				<div class="container">
+					<div class="wrapper-form">
+						<form class="form">
+							<legend class="form__header">
+								have any questions?
+							</legend>
+							<p class="form__block form__block-name">
+								<label class="form__label" for="form__name">Name</label>
+								<input class="form__input" id="form__name" name="form__name" type="text"
+									placeholder="What is your name:" required>
+							</p>
+							<p class="form__block form__block-phone">
+								<label class="form__label" for="form__phone">Phone</label>
+								<input class="form__input" id="form__phone" name="form__phone" type="tel"
+									placeholder="Your phone number:" required>
+							</p>
+							<p class="form__block form__block-question">
+								<label class="form__label" for="form__question">Question</label>
+								<input class="form__input" id="form__question" name="form__phone" type="tel"
+									placeholder="I want to know:" required>
+							</p>
+							<div class="form__checkbox">
+								<input type="checkbox" name="form__confirm" id="form__confirm" checked>
+								<label for="form__confirm">I agree to the processing of personal data</label>
+							</div>
+							<button class="form__button">submit</button>
+						</form>
+					</div>
+					<p class="contacts__address">
+						Rostov-on-Don, Nansen St., 239 Shopping Center
+						Decorum <span>Tel <a class="contacts__tel" href="tel:+7(928)768-32-39">+7 (928) 768 32 29</a></span>
+					</p>
+					<section class="contacts__socials">
+						<a href="#" class="contacts__email"></a>
+						<a href="#" class="contacts__instagram"></a>
+					</section>
+					<div class="contacts__map">
+						<picture>
+							<source srcset="./assets/images/contacts-map-mobile.png" media="(max-width: 375px)">
+							<source srcset="./assets/images/contacts-map.png">
+							<img src="./assets/images/contacts-map.png" width="925" height="425" alt="Map">
+						</picture>
+					</div>
+				</div>
+			</section>
+
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="navigation">
+					<a href="#" class="navigation__name">IC "Repair Design Project"</a>
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a href="#" class="nav__link nav__link_current">home</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">projects</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">masurement</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">team</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">reviews</a>
+							</li>
+							<li class="nav__item">
+								<a href="#" class="nav__link">contacts</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="navigation__phone">
+						<a class="navigation__phone-link" href="tel:+7(928)768-32-39">
+							+7 (928) 768-32-39</a>
+						<button class="navigation__button" type="button">Request a call</button>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 	</div>
 </body>
